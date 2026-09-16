@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Muhammad Siro Jammuniro</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS lama dipertahankan sebagai referensi, aturan aktif ada di style.css.
+        /* --- VARIABEL WARNA & RESET --- */
+        :root {
+            --primary-blue: #0d6efd;
+            --bg-light: #eef4fb;
+            --bg-lighter: #f8fbff;
+            --text-dark: #1a1a1a;
+            --text-muted: #555555;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--bg-lighter);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- TOMBOL UTAMA --- */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+        }
+
+        /* --- SECTION 1: HERO --- */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 10%;
+            background-color: var(--bg-light);
+            min-height: 100vh;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1;
+            display: flex;
+            gap: 30px;
+        }
+
+        .hero-socials {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
+
+        .hero-socials a:hover {
+            color: var(--primary-blue);
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-text h1 span {
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        /* --- SECTION 2: ABOUT --- */
+        .about {
+            padding: 100px 10%;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .section-title .underline {
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-blue);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Efek bingkai biru di belakang gambar */
+        .about-image::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--primary-blue);
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        /* --- SECTION 3: SERVICES --- */
+        .services {
+            padding: 100px 10%;
+            background-color: var(--bg-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Efek lengkungan di background */
+        .services::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(13,110,253,0.1) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: #fce8e8;
+            color: #dc3545;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card .arrow-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--text-dark);
+            border-radius: 50%;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .service-card .arrow-btn:hover {
+            background-color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* --- SECTION 4: PROJECTS --- */
+        .projects {
+            padding: 100px 10%;
+            background-color: var(--bg-lighter);
+            position: relative;
+        }
+
+        /* Efek lengkungan di background projects */
+        .projects::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: var(--bg-light);
+            border-bottom-right-radius: 100%;
+            z-index: 0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .project-year {
+            display: inline-block;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- DESIGN PORTFOLIO --- */
+        .designs {
+            padding: 100px 10%;
+            background-color: var(--white);
+        }
+
+        .design-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .design-slot {
+            min-height: 300px;
+            padding: 24px;
+            border: 1px solid #dce5ef;
+            border-radius: 12px;
+            background-color: var(--bg-lighter);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-muted);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .design-slot:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-5px);
+        }
+
+        .design-slot i {
+            color: var(--primary-blue);
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .design-slot h3 {
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            margin-bottom: 5px;
+        }
+
+        .design-slot p {
+            font-size: 0.85rem;
+        }
+
+        .design-slot img {
+            width: 100%;
+            height: 210px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .design-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* --- SECTION 5: CONTACT & FOOTER --- */
+        .contact {
+            padding: 100px 10% 60px;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .contact p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .contact-form {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto 80px;
+        }
+
+        .contact-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.3s ease;
+        }
+
+        .contact-form input:focus {
+            border-color: var(--primary-blue);
+        }
+
+        .contact-form button {
+            border-radius: 8px;
+            padding: 15px 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: var(--white);
+            padding: 40px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-socials a:hover {
+            color: var(--primary-blue);
+        }
+
+        .footer-email {
+            font-weight: 600;
+        }
+
+        .footer-copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Floating WhatsApp Button */
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- RESPONSIVE DESIGN (Mobile) --- */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 60px 5%;
+            }
+            .hero-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero-socials {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            .about-container {
+                flex-direction: column;
+            }
+            .about-image::after {
+                display: none; /* Sembunyikan efek border di HP */
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-form {
+                flex-direction: column;
+            }
+            .contact-form button {
+                width: 100%;
+            }
+        }
+    -->
+</head>
+<body>
+
+    <!-- SECTION 1: HERO -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-socials">
+                <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="hero-text">
+                <h1>I'm Web Developer <br><span>MUHAMMAD SIRO JAMMUNIRO</span></h1>
+                <p>Saya Siswa PPLG yang memiliki minat di bidang pengembangan website. Menguasai dasar HTML, CSS, dan WordPress.</p>
+                <a href="#about" class="btn-primary">Learn more</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Ganti src dengan foto kamu sendiri -->
+            <img src="image/wajah.png" alt="Muhammad Siro Jammuniro">
+        </div>
+    </header>
+
+    <!-- SECTION 2: ABOUT ME -->
+    <section class="about" id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-container">
+            <div class="about-text">
+                <h3>Fokus Belajar, Siap Berkontribusi.</h3>
+                <p>Saya Muhammad Siro Jammuniro, siswa jurusan PPLG (Pengembangan Perangkat Lunak dan Game) yang memiliki minat besar di bidang web development. Saya mulai belajar HTML, CSS, dan WordPress untuk memahami bagaimana website bekerja.</p>
+                <p>Selama belajar, saya telah membuat beberapa proyek sederhana seperti website cek cuaca dan landing page. Saat ini saya sedang mencari kesempatan Praktik Kerja Lapangan (PKL) untuk mengasah skill saya dan belajar langsung dari profesional di industri. Saya siap berkontribusi dan berkembang.</p>
+                <a href="#contact" class="btn-primary">Contact Me</a>
+            </div>
+            <div class="about-image">
+                <!-- Ganti src dengan screenshot proyek cuaca kamu -->
+                <img src="image/foto%20gg.jpg" alt="Preview Proyek Cuaca">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SERVICES -->
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>What Services I'm Providing</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="services-grid">
+            <!-- Card 1 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-pen-nib"></i></div>
+                <h3>UI/UX Design</h3>
+                <p>Merancang tampilan website yang bersih, modern, dan mudah digunakan. Familiar dengan prinsip dasar desain antarmuka dan pengalaman pengguna.</p>
+                <a href="#" class="arrow-btn"><i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- Card 2 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fab fa-wordpress"></i></div>
+                <h3>WordPress</h3>
+                <p>Membangun dan mengelola website menggunakan WordPress. Terbiasa dengan instalasi tema, plugin, dan kustomisasi konten.</p>
+                <a href="#" class="arrow-btn"><i class="fas fa-arrow-right"></i></a>
+            </div>
+            <!-- Card 3 -->
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-code"></i></div>
+                <h3>Web Development</h3>
+                <p>Mengembangkan website responsif menggunakan HTML, CSS, dan JavaScript. Fokus pada kode yang rapi dan website yang berfungsi dengan baik.</p>
+                <a href="#" class="arrow-btn"><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PROJECTS -->
+    <section class="projects" id="projects">
+        <div class="section-title">
+            <h2>MY PROJECT</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Website Cek Cuaca</h3>
+                <span class="project-year">2024</span>
+                <p>Membuat aplikasi web sederhana untuk menampilkan informasi cuaca real-time menggunakan integrasi API dan Leaflet Maps.</p>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>E-Commerce Sepatu</h3>
+                <span class="project-year">2025</span>
+                <p>Merancang dan membangun halaman promosi produk yang responsif dan modern menggunakan Laravel Livewire Bersama Team Zorie.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: DESIGN PORTFOLIO -->
+    <section class="designs" id="designs">
+        <div class="section-title">
+            <h2>DESIGN</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="design-grid">
+            <!-- Ganti setiap slot dengan preview desain saat sudah tersedia -->
+            <div class="design-slot">
+                <img src="image/Logo.png" alt="Logo Zorie">
+                <h3>Logo Zorie</h3>
+            </div>
+            <div class="design-slot">
+                <img src="image/saya buat.png" alt="Logo desain kedua">
+                <h3>Dashboard</h3>
+            </div>
+            <div class="design-slot">
+                <img src="image/Utan Merah.png" alt="Logo desain ketiga">
+                <h3>Poster</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: CONTACT -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Stay In Touch</h2>
+            <div class="underline"></div>
+        </div>
+        <p>Mari terhubung. Silakan tinggalkan pesan di sini untuk mendiskusikan kesempatan PKL atau kolaborasi.</p>
+        
+        <form class="contact-form" action="https://formspree.io/f/xgaegoez" method="POST">
+            <input type="email" name="email" placeholder="Masukkan email Anda" required>
+            <input type="hidden" name="_subject" value="Pesan dari website portofolio">
+            <button type="submit" class="btn-primary">Kirim</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com/mu.si.ja/"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/6283123564452" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/Jamz-colins"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="footer-email">
+            jamun8036@gmail.com
+        </div>
+        <div class="footer-copyright">
+            Copyright &copy; 2026 Portofolio. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/6283123564452" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
